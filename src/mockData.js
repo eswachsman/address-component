@@ -1,0 +1,110 @@
+const streetNames = [
+  'Oak', 'Maple', 'Cedar', 'Pine', 'Elm', 'Main', 'Washington', 'Park', 'Lake', 'Hill',
+  'River', 'View', 'Forest', 'High', 'Ridge', 'Church', 'Mill', 'Bridge', 'Pearl', 'Spring',
+  'Market', 'Water', 'Union', 'School', 'Central', 'Walnut', 'Chestnut', 'Broad', 'Madison', 'Highland',
+  'Green', 'Valley', 'Cherry', 'Summit', 'Willow', 'Lincoln', 'Franklin', 'Adams', 'Jefferson', 'Jackson',
+  'Wilson', 'Grant', 'Monroe', 'Cleveland', 'Harrison', 'Hamilton', 'Roosevelt', 'Howard', 'Sherman', 'Porter',
+  'Wood', 'Dogwood', 'Spruce', 'Birch', 'Ash', 'Beech', 'Grove', 'Park', 'Sunset', 'Sunrise',
+  'Meadow', 'Brook', 'Creek', 'River', 'Lake', 'Ocean', 'Bay', 'Harbor', 'Beach', 'Shore',
+  'Mountain', 'Hill', 'Valley', 'Canyon', 'Ridge', 'Summit', 'Highland', 'Lowland', 'Prairie', 'Plains',
+  'Garden', 'Flower', 'Rose', 'Lily', 'Tulip', 'Daisy', 'Violet', 'Iris', 'Orchid', 'Jasmine',
+  'Forest', 'Woods', 'Timber', 'Woodland', 'Pinewood', 'Oakwood', 'Maplewood', 'Cedarwood', 'Redwood', 'Birchwood'
+].map(name => name + ' ' + ['St', 'Ave', 'Rd', 'Ln', 'Dr', 'Blvd', 'Way', 'Circle', 'Court', 'Place'][Math.floor(Math.random() * 10)])
+
+const cities = [
+  'New York', 'Los Angeles', 'Chicago', 'Houston', 'Phoenix', 'Philadelphia', 'San Antonio', 'San Diego',
+  'Dallas', 'San Jose', 'Austin', 'Jacksonville', 'Fort Worth', 'Columbus', 'San Francisco', 'Charlotte',
+  'Indianapolis', 'Seattle', 'Denver', 'Boston', 'Portland', 'Miami', 'Atlanta', 'Detroit', 'Minneapolis',
+  'Las Vegas', 'Sacramento', 'Kansas City', 'Cleveland', 'Cincinnati', 'Nashville', 'Orlando', 'Buffalo',
+  'Milwaukee', 'Pittsburgh', 'St. Louis', 'Baltimore', 'Salt Lake City', 'Tampa', 'Oakland', 'Raleigh',
+  'Memphis', 'Louisville', 'Richmond', 'New Orleans', 'Oklahoma City', 'Tucson', 'Omaha', 'Albuquerque', 'Fresno'
+]
+
+const countries = [
+  { name: 'United States', code: 'US' },
+  { name: 'Canada', code: 'CA' },
+  { name: 'United Kingdom', code: 'GB' },
+  { name: 'Australia', code: 'AU' },
+  { name: 'Germany', code: 'DE' },
+  { name: 'France', code: 'FR' },
+  { name: 'Spain', code: 'ES' },
+  { name: 'Italy', code: 'IT' },
+  { name: 'Japan', code: 'JP' },
+  { name: 'Brazil', code: 'BR' },
+  { name: 'Mexico', code: 'MX' },
+  { name: 'India', code: 'IN' },
+  { name: 'China', code: 'CN' },
+  { name: 'South Korea', code: 'KR' },
+  { name: 'Netherlands', code: 'NL' }
+]
+
+const usStates = [
+  { name: 'Alabama', abbr: 'AL' },
+  { name: 'Alaska', abbr: 'AK' },
+  { name: 'Arizona', abbr: 'AZ' },
+  { name: 'Arkansas', abbr: 'AR' },
+  { name: 'California', abbr: 'CA' },
+  { name: 'Colorado', abbr: 'CO' },
+  { name: 'Connecticut', abbr: 'CT' },
+  { name: 'Delaware', abbr: 'DE' },
+  { name: 'Florida', abbr: 'FL' },
+  { name: 'Georgia', abbr: 'GA' },
+  { name: 'Hawaii', abbr: 'HI' },
+  { name: 'Idaho', abbr: 'ID' },
+  { name: 'Illinois', abbr: 'IL' },
+  { name: 'Indiana', abbr: 'IN' },
+  { name: 'Iowa', abbr: 'IA' },
+  { name: 'Kansas', abbr: 'KS' },
+  { name: 'Kentucky', abbr: 'KY' },
+  { name: 'Louisiana', abbr: 'LA' },
+  { name: 'Maine', abbr: 'ME' },
+  { name: 'Maryland', abbr: 'MD' },
+  { name: 'Massachusetts', abbr: 'MA' },
+  { name: 'Michigan', abbr: 'MI' },
+  { name: 'Minnesota', abbr: 'MN' },
+  { name: 'Mississippi', abbr: 'MS' },
+  { name: 'Missouri', abbr: 'MO' },
+  { name: 'Montana', abbr: 'MT' },
+  { name: 'Nebraska', abbr: 'NE' },
+  { name: 'Nevada', abbr: 'NV' },
+  { name: 'New Hampshire', abbr: 'NH' },
+  { name: 'New Jersey', abbr: 'NJ' },
+  { name: 'New Mexico', abbr: 'NM' },
+  { name: 'New York', abbr: 'NY' },
+  { name: 'North Carolina', abbr: 'NC' },
+  { name: 'North Dakota', abbr: 'ND' },
+  { name: 'Ohio', abbr: 'OH' },
+  { name: 'Oklahoma', abbr: 'OK' },
+  { name: 'Oregon', abbr: 'OR' },
+  { name: 'Pennsylvania', abbr: 'PA' },
+  { name: 'Rhode Island', abbr: 'RI' },
+  { name: 'South Carolina', abbr: 'SC' },
+  { name: 'South Dakota', abbr: 'SD' },
+  { name: 'Tennessee', abbr: 'TN' },
+  { name: 'Texas', abbr: 'TX' },
+  { name: 'Utah', abbr: 'UT' },
+  { name: 'Vermont', abbr: 'VT' },
+  { name: 'Virginia', abbr: 'VA' },
+  { name: 'Washington', abbr: 'WA' },
+  { name: 'West Virginia', abbr: 'WV' },
+  { name: 'Wisconsin', abbr: 'WI' },
+  { name: 'Wyoming', abbr: 'WY' }
+]
+
+const canadianProvinces = [
+  { name: 'Alberta', abbr: 'AB' },
+  { name: 'British Columbia', abbr: 'BC' },
+  { name: 'Manitoba', abbr: 'MB' },
+  { name: 'New Brunswick', abbr: 'NB' },
+  { name: 'Newfoundland and Labrador', abbr: 'NL' },
+  { name: 'Nova Scotia', abbr: 'NS' },
+  { name: 'Ontario', abbr: 'ON' },
+  { name: 'Prince Edward Island', abbr: 'PE' },
+  { name: 'Quebec', abbr: 'QC' },
+  { name: 'Saskatchewan', abbr: 'SK' },
+  { name: 'Northwest Territories', abbr: 'NT' },
+  { name: 'Nunavut', abbr: 'NU' },
+  { name: 'Yukon', abbr: 'YT' }
+]
+
+export { streetNames, cities, countries, usStates, canadianProvinces }
